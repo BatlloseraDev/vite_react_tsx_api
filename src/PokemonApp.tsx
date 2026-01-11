@@ -2,6 +2,7 @@ import { PreviousSearches } from "./pokemon/components/PreviousSearches";
 import { mockInfo } from "./mock-data/pokemons.mock";
 import { SearchBar } from "./shared/components/SearchBar";
 import { CustomHeader } from "./shared/components/CustomHeader";
+import { InfoList } from "./pokemon/components/descriptionsList";
 
 
 
@@ -34,7 +35,7 @@ export const PokemonApp=()=>{
         </div> */}
 
         {/* Descripciones*/}
-        <div className="descriptions-container">
+        {/* <div className="descriptions-container">
             {mockInfo.map((pokemon)=>(
                 <div key={pokemon.id} className="description-card">
                     <h3>{pokemon.name}</h3>
@@ -44,7 +45,8 @@ export const PokemonApp=()=>{
                     ))}
                 </div>       
             ))}
-        </div>
+        </div> */}
+        <InfoList infos={mockInfo}/>
         </>
     );
 

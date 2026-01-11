@@ -1,4 +1,4 @@
-export interface info{
+export interface Info{
     id: string;
     name: string;
     url: string;
@@ -12,7 +12,7 @@ export interface info{
 
 //https://pokeapi.co/api/v2/pokemon-species/{id-o-nombre} -> para descripciones
 //https://pokeapi.co/api/v2/pokemon/{id-o-nombre} -> para imagen y url
-export const mockInfo: info[] =[
+export const mockInfo: Info[] =[
     {
         id: "1",
         name: "bulbasaur",
