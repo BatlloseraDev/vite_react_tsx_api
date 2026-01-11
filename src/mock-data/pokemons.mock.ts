@@ -2,6 +2,7 @@ export interface info{
     id: string;
     name: string;
     url: string;
+    img: string;
     descriptions: {
         language: string;
         edition:string;
@@ -9,12 +10,14 @@ export interface info{
     }[];
 }
 
-
+//https://pokeapi.co/api/v2/pokemon-species/{id-o-nombre}
+//https://pokeapi.co/api/v2/pokemon/{id-o-nombre}
 export const mockInfo: info[] =[
     {
         id: "1",
         name: "bulbasaur",
         url: "https://pokeapi.co/api/v2/pokemon/1/",
+        img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
         descriptions: [
             {
                 language: "en",
@@ -32,6 +35,7 @@ export const mockInfo: info[] =[
         id: "2",
         name: "ivysaur",
         url: "https://pokeapi.co/api/v2/pokemon/2/",
+        img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
         descriptions: [
             {
                 language: "en",
@@ -49,6 +53,7 @@ export const mockInfo: info[] =[
         id: "3",
         name: "venusaur",
         url: "https://pokeapi.co/api/v2/pokemon/3/",
+        img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
         descriptions: [
             {
                 language: "en",
@@ -66,6 +71,7 @@ export const mockInfo: info[] =[
         id: "4",
         name: "charmander",
         url: "https://pokeapi.co/api/v2/pokemon/4/",
+        img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
         descriptions: [
             {
                 language: "en",
@@ -83,6 +89,7 @@ export const mockInfo: info[] =[
         id: "5",
         name: "charmeleon",
         url: "https://pokeapi.co/api/v2/pokemon/5/",
+        img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
         descriptions: [
             {
                 language: "en",
