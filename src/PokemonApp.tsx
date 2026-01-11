@@ -1,16 +1,19 @@
 import { PreviousSearches } from "./pokemon/components/PreviousSearches";
 import { mockInfo } from "./mock-data/pokemons.mock";
 import { SearchBar } from "./shared/components/SearchBar";
+import { CustomHeader } from "./shared/components/CustomHeader";
+
 
 
 export const PokemonApp=()=>{
     return (
         <>
         {/*Header*/}
-        <div className= "content-center">
+        {/* <div className= "content-center">
             <h1>Buscador de descripciones de pokemons</h1>
             <p>Descubre todas las descripciones de tus pokemons favoritos</p>
-        </div>
+        </div> */}
+        <CustomHeader title="Buscador de descripciones de pokémons" description="Descubre todas las descripciones de tus pokémons favoritos"/>
 
         {/* Search*/}
         {/* <div className="search-container">
