@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { PreviousSearches } from "./pokemon/components/PreviousSearches";
 import { mockInfo } from "./mock-data/pokemons.mock";
 import { SearchBar } from "./shared/components/SearchBar";
@@ -7,6 +8,14 @@ import { InfoList } from "./pokemon/components/descriptionsList";
 
 
 export const PokemonApp=()=>{
+
+    const [previousTerms, setPreviousTerms] = useState(['Pikachu', 'Bulbasaur', 'Charmander']);
+
+    const handleTermClicked = (term: string) => {
+        console.log('Term clicked:', term);
+    };
+
+
     return (
         <>
         {/*Header*/}
@@ -24,7 +33,8 @@ export const PokemonApp=()=>{
         <SearchBar placeholder="Buscar pokémon"/>
 
         {/*Búsquedas prevías */}
-        <PreviousSearches searches={['Pikachu', 'Bulbasaur', 'Charmander']}/>
+        <PreviousSearches searches={previousTerms} onLabelClicked={handleTermClicked}/>
+
         {/* <div className="previous-searches">
             <h2>Búsquedas anteriores</h2>
             <ul className="previous-searches-list">
