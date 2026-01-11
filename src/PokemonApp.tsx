@@ -1,5 +1,7 @@
 import { PreviousSearches } from "./pokemon/components/PreviousSearches";
 import { mockInfo } from "./mock-data/pokemons.mock";
+import { SearchBar } from "./shared/components/SearchBar";
+
 
 export const PokemonApp=()=>{
     return (
@@ -11,10 +13,12 @@ export const PokemonApp=()=>{
         </div>
 
         {/* Search*/}
-        <div className="search-container">
+        {/* <div className="search-container">
             <input type="text" placeholder="Buscar pokemon"/>
             <button>Buscar</button>
-        </div>
+        </div> */}
+        <SearchBar placeholder="Buscar pokémon"/>
+
         {/*Búsquedas prevías */}
         <PreviousSearches/>
         {/* <div className="previous-searches">
