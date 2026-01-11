@@ -10,8 +10,8 @@ export interface info{
     }[];
 }
 
-//https://pokeapi.co/api/v2/pokemon-species/{id-o-nombre}
-//https://pokeapi.co/api/v2/pokemon/{id-o-nombre}
+//https://pokeapi.co/api/v2/pokemon-species/{id-o-nombre} -> para descripciones
+//https://pokeapi.co/api/v2/pokemon/{id-o-nombre} -> para imagen y url
 export const mockInfo: info[] =[
     {
         id: "1",
