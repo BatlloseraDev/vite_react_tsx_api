@@ -1,3 +1,4 @@
+import { PreviousSearches } from "./pokemon/components/PreviousSearches";
 import { mockInfo } from "./mock-data/pokemons.mock";
 
 export const PokemonApp=()=>{
@@ -15,14 +16,15 @@ export const PokemonApp=()=>{
             <button>Buscar</button>
         </div>
         {/*Búsquedas prevías */}
-        <div className="previous-searches">
+        <PreviousSearches/>
+        {/* <div className="previous-searches">
             <h2>Búsquedas anteriores</h2>
             <ul className="previous-searches-list">
                 <li>Pikachu</li>
                 <li>Bulbasaur</li>
                 <li>Charmander</li>
             </ul>
-        </div>
+        </div> */}
 
         {/* Descripciones*/}
         <div className="descriptions-container">
