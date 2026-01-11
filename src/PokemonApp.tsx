@@ -24,7 +24,7 @@ export const PokemonApp=()=>{
         <SearchBar placeholder="Buscar pokémon"/>
 
         {/*Búsquedas prevías */}
-        <PreviousSearches/>
+        <PreviousSearches searches={['Pikachu', 'Bulbasaur', 'Charmander']}/>
         {/* <div className="previous-searches">
             <h2>Búsquedas anteriores</h2>
             <ul className="previous-searches-list">
