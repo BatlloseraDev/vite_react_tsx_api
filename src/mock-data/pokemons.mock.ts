@@ -1,14 +1,5 @@
-export interface Info{
-    id: Number;
-    name: string;
-    url: string;
-    img: string;
-    descriptions: {
-        language: string;
-        edition:string;
-        info: string;
-    }[];
-}
+import type { Info } from "../pokemon/interfaces/info.interface";
+
 
 //https://pokeapi.co/api/v2/pokemon-species/{id-o-nombre} -> para descripciones
 //https://pokeapi.co/api/v2/pokemon/{id-o-nombre} -> para imagen y url

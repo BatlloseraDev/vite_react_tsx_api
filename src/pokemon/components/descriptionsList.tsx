@@ -1,4 +1,4 @@
-import {type Info} from '../../mock-data/pokemons.mock.ts';
+import {type Info} from '../interfaces/info.interface';
 
 interface Props{
     infos: Info[];
