@@ -1,4 +1,4 @@
-import {useState, type KeyboardEvent} from 'react';
+import {useEffect, useState, type KeyboardEvent} from 'react';
 
 
 interface Props {
@@ -9,6 +9,15 @@ interface Props {
 export const SearchBar = ({ placeholder = 'Buscar', onQuery }: Props) => {
     const [query, setQuery] = useState('');
     
+    //por lo que entiendo es que los efectos traten de hacer una unica tarea y que se cargue cuando se monta el componente
+    useEffect(()=>{
+        const timeoutId = setTimeout(()=>{onQuery(query); setQuery('');}, 700);
+        return ()=>{
+            clearTimeout(timeoutId);
+        };
+    }, [query, onQuery]);
+
+
     const handleSearch = () =>{
         onQuery(query);
         setQuery('');
