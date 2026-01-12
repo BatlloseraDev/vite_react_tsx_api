@@ -16,8 +16,11 @@ export const PokemonApp=()=>{
     };
 
     const handleSearch = (query: string) => {
-        console.log('Query:', query);
-        setPreviousTerms([...previousTerms, query]);
+        query = query.trim().toLowerCase();
+        if (query.length === 0) return;
+        if (previousTerms.includes(query)) return;
+        // console.log('Query:', query);
+        setPreviousTerms([query,...previousTerms].splice(0, 7));
     };
 
 
