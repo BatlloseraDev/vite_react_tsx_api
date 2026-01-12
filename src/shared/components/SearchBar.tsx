@@ -11,7 +11,13 @@ export const SearchBar = ({ placeholder = 'Buscar', onQuery }: Props) => {
     
     //por lo que entiendo es que los efectos traten de hacer una unica tarea y que se cargue cuando se monta el componente
     useEffect(()=>{
-        const timeoutId = setTimeout(()=>{onQuery(query); setQuery('');}, 700);
+
+        if(query.length ===0) return;//paso para evitar el bucle infinito
+
+        const timeoutId = setTimeout(()=>{
+            onQuery(query);
+            setQuery('');
+        }, 700);
         return ()=>{
             clearTimeout(timeoutId);
         };
