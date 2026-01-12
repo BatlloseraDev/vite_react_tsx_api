@@ -15,6 +15,11 @@ export const PokemonApp=()=>{
         console.log('Term clicked:', term);
     };
 
+    const handleSearch = (query: string) => {
+        console.log('Query:', query);
+        setPreviousTerms([...previousTerms, query]);
+    };
+
 
     return (
         <>
@@ -30,7 +35,10 @@ export const PokemonApp=()=>{
             <input type="text" placeholder="Buscar pokemon"/>
             <button>Buscar</button>
         </div> */}
-        <SearchBar placeholder="Buscar pokémon"/>
+        <SearchBar 
+        placeholder="Buscar pokémon"
+        onQuery={handleSearch}
+        />
 
         {/*Búsquedas prevías */}
         <PreviousSearches searches={previousTerms} onLabelClicked={handleTermClicked}/>
