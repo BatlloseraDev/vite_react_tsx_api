@@ -17,7 +17,7 @@ export const getInfoByQuery = async (query: string): Promise<Info> => {
             img: dataPokemon.data.sprites.other?.["official-artwork"].front_default || dataPokemon.data.sprites.front_default,
 
             descriptions: dataSpecies.data.flavor_text_entries
-                .filter(entry => entry.language.name === "es")
+                .filter(entry =>  entry.language.name === "en")
                 .map(entry => ({
                     language: entry.language.name,
                     edition: entry.version.name,
