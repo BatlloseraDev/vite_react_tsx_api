@@ -1,5 +1,5 @@
 export interface Info{
-    id: string;
+    id: Number;
     name: string;
     url: string;
     img: string;
@@ -14,7 +14,7 @@ export interface Info{
 //https://pokeapi.co/api/v2/pokemon/{id-o-nombre} -> para imagen y url
 export const mockInfo: Info[] =[
     {
-        id: "1",
+        id: 1,
         name: "bulbasaur",
         url: "https://pokeapi.co/api/v2/pokemon/1/",
         img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
@@ -32,7 +32,7 @@ export const mockInfo: Info[] =[
         ]
     },
     {
-        id: "2",
+        id: 2,
         name: "ivysaur",
         url: "https://pokeapi.co/api/v2/pokemon/2/",
         img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
@@ -50,7 +50,7 @@ export const mockInfo: Info[] =[
         ]
     },
     {
-        id: "3",
+        id: 3,
         name: "venusaur",
         url: "https://pokeapi.co/api/v2/pokemon/3/",
         img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
@@ -68,7 +68,7 @@ export const mockInfo: Info[] =[
         ]
     },
     {
-        id: "4",
+        id: 4,
         name: "charmander",
         url: "https://pokeapi.co/api/v2/pokemon/4/",
         img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
@@ -86,7 +86,7 @@ export const mockInfo: Info[] =[
         ]
     },
     {
-        id: "5",
+        id: 5,
         name: "charmeleon",
         url: "https://pokeapi.co/api/v2/pokemon/5/",
         img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",

@@ -8,7 +8,7 @@ export const InfoList = ({infos}: Props) => {
     return (
         <div className="descriptions-container">
             {infos.map((pokemon)=>(
-                <div key={pokemon.id} className="description-card">
+                <div key={`${pokemon.id}`} className="description-card">
                     <h3>{pokemon.name}</h3>
                     <img src={pokemon.img} alt={pokemon.name}/>
                     {pokemon.descriptions.map((desc, index)=>(
