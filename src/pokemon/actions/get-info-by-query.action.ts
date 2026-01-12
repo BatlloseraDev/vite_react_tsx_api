@@ -1,4 +1,4 @@
-import axios from "axios";
+import { pokeApi } from "../api/pokemon.api";
 import type { PokemonResponse, PokemonSpeciesResponse } from "../interfaces/pokeapi.response";
 import type { Info } from "../interfaces/info.interface";
 
@@ -6,8 +6,8 @@ export const getInfoByQuery = async (query: string): Promise<Info> => {
 
     try {
         const [dataPokemon, dataSpecies] = await Promise.all([
-            await axios.get<PokemonResponse>(`https://pokeapi.co/api/v2/pokemon/${query}`),
-            await axios.get<PokemonSpeciesResponse>(`https://pokeapi.co/api/v2/pokemon-species/${query}`)
+            pokeApi.get<PokemonResponse>(`/pokemon/${query}`),
+            pokeApi.get<PokemonSpeciesResponse>(`/pokemon-species/${query}`)
         ]);// como una no depende de la otra las lanzo al mismo tiempo
         const myInfo: Info = {
             id: dataPokemon.data.id,
@@ -25,7 +25,7 @@ export const getInfoByQuery = async (query: string): Promise<Info> => {
                 }))
         };
         return myInfo;
-        
+
     } catch (error) {
         console.log(error);
         throw new Error(`No se ecnontró el Pokemon: ${query}`)
