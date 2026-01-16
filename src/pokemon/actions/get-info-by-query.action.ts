@@ -9,6 +9,7 @@ export const getInfoByQuery = async (query: string): Promise<Info> => {
             pokeApi.get<PokemonResponse>(`/pokemon/${query}`),
             pokeApi.get<PokemonSpeciesResponse>(`/pokemon-species/${query}`)
         ]);// como una no depende de la otra las lanzo al mismo tiempo
+        
         const myInfo: Info = {
             id: dataPokemon.data.id,
             name: dataPokemon.data.name,
